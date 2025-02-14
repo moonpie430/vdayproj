@@ -1,0 +1,256 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9f5db;
+}
+
+.page { display: none; }
+.active { display: block; }
+button { margin-top: 20px; }
+
+input#flap {
+  display: none;
+}
+
+.envelope-container {
+  position: relative;
+ 
+}
+
+.envelope-back {
+  position: relative;
+  width: 847px;
+  height: 400px;
+  background-color: #718355;
+}
+
+.envelope-back:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.07);
+    width: 800px;
+    height: 64px;
+    border-radius: 50%;
+    top: 417px;
+}
+
+.card {
+    position: absolute;
+    width: 781px;
+    height: 400px;
+    background-color: white;
+    top: 10px;
+    left: -41px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-family: Raleway;
+    transition: .1s;
+    z-index: 1;
+    cursor: pointer;
+  text-align: justify;
+  padding: 0 50px;
+}
+.card:before{
+  font-color:transparent;
+}
+.card-front {
+position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 401px solid #87986a;
+    border-left: 460px solid transparent;
+    border-right: 460px solid transparent;
+    top: 247px;
+    left: -51px;
+    bottom: 404px;
+    z-index: 1;
+}
+
+.card-front:before, .card-front:after {
+  content:"";
+  position: absolute;
+  border-bottom: 401px solid transparent;
+  border-top: 482px solid transparent;
+  height:0;
+  width:0;
+}
+
+.card-front:before {
+    border-left: 375px solid transparent;
+    border-right: 478px solid #97a97c;
+    top: -482px;
+    left: -394px;
+}
+
+.card-front:after {
+border-right: 429px solid transparent;
+    border-left: 522px solid #97a97c;
+    top: -484px;
+    left: -456px;
+}
+
+.flap {
+    position: absolute;
+    width: 0;
+    height: 0;
+border-top: 477px solid #b5c99a;
+    border-left: 473px solid transparent;
+    border-right: 450px solid transparent;
+    top: -239px;
+    left: -50px;
+    cursor: pointer;
+    transition: .3s;
+    transform-origin: top;
+    z-index: 4;
+}
+
+#flap:checked + .flap {
+  transform: rotateX(180deg);
+}
+
+#flap:checked ~ .card-front {
+  z-index:7;
+}
+
+#flap:checked ~ .card {
+    z-index: 10;
+    transform: translateY(-250px);
+    height: 921px;
+}
+
+#flap:unchecked ~ .card {
+z-index: 10;
+    transform: translateY(40px);
+    height: 941px;
+}
+.div1{
+    width: 100%; 
+    z-index: 1;
+    text-align: center;
+    padding: 0px 50px !important;
+    font-size: 60px !important;
+}
+
+.gif-1{
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.valentines-day{
+  height: 100%;
+  width: 100%;
+  font-family: Raleway;
+  letter-spacing: 2px
+}
+  
+.block-1{
+  border: 5px solid #4CAF50;
+  display: flex;
+  justify-content: center;
+  align-items : center;
+  width: 100%;
+}
+
+button {
+border-top: 100px solid transparent;
+border-bottom: 100px solid transparent;
+border-right: 100px solid;
+background: #e9f5db;
+border-left: none;
+cursor: pointer;
+outline: none;
+}
+
+.a {
+margin-right: 90px;
+border-right-color: #d8bee5;
+
+&:hover {
+  border-right-color: #d2aee5 !important;
+}
+}
+
+.b {
+border-left: 100px solid;
+border-right: none;
+border-left-color: #d8bee5;
+&:hover {
+  border-left-color: #d2aee5 !important;
+}
+}
+
+.button-triangles{
+display: flex;
+justify-content: center;
+}
+
+.flowers-header{
+width: 100%;
+font-size: 30px;
+text-align: justify;
+padding: 0 40px;
+}
+
+.img1{
+padding-right: 10px;
+
+}
+
+.img2{
+padding-left: 5px;
+padding-right: 10px;
+}
+
+.flowers-content{
+display: flex;
+padding-top: 5px;
+}
+
+.playlist-header{
+    width: 100%;
+  font-size: 30px;
+  text-align: justify;
+  padding: 0 40px;
+}
+
+.playlist-content{
+    display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.letter{
+padding: 20px;
+}
+
+.playlist-content-2{
+    display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+.banner-header{
+  padding: 30px 30px;
+  font-size: 30px;
+  text-align: justify;
+}
+
+.block-1-last{
+    border: 5px solid #4CAF50;
+  display: flex;
+  justify-content: center;
+  align-items : center;
+  width: 100%;
+  height: 910px;
+}
